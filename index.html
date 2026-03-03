@@ -1,803 +1,1480 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Centre Dentaire Polo – Soins dentaires d'excellence au cœur de Casablanca. Implantologie, chirurgie, esthétique et prévention." />
-  <title>Centre Dentaire Polo – Casablanca</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    /* ── Reset & Variables ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --g5: #5CB85C; --g6: #4a9e4a; --g4: #7bc87b; --g1: #f0faf0; --g2: #d4edda;
-      --s9: #0f172a; --s8: #1e293b; --s7: #334155; --s5: #64748b; --s4: #94a3b8;
-      --s2: #e2e8f0; --s1: #f1f5f9; --s0: #f8fafc;
-      --fd: 'Playfair Display', Georgia, serif;
-      --fb: 'DM Sans', system-ui, sans-serif;
-      --r-sm: 8px; --r-md: 16px; --r-lg: 24px; --r-xl: 40px;
-      --sh-sm: 0 2px 8px rgba(0,0,0,.06);
-      --sh-md: 0 8px 32px rgba(0,0,0,.10);
-      --sh-lg: 0 24px 64px rgba(0,0,0,.14);
-      --sh-g: 0 8px 32px rgba(92,184,92,.25);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--fb); background: #fff; color: var(--s8); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-thumb { background: var(--g5); border-radius: 3px; }
-    ::selection { background: var(--g2); color: var(--g6); }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-    button { cursor: pointer; border: none; background: none; font-family: var(--fb); }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Centre Dentaire Polo – Soins bucco-dentaires d'excellence à Casablanca. Implantologie, chirurgie, esthétique dentaire."/>
+<title>Centre Dentaire Polo — Casablanca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════
+   CENTRE DENTAIRE POLO
+   Direction: Swiss Medical Luxury
+   — Precise grids, dramatic scale contrasts
+   — Deep forest + warm cream + gold ink
+   — Full-bleed photography with surgical overlays
+   — Every detail intentional, nothing decorative
+   Fonts: Libre Baskerville (display) + DM Sans (UI)
+════════════════════════════════════════════ */
 
-    /* ── Animations ── */
-    @keyframes fadeUp   { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
-    @keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
-    @keyframes float    { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
-    @keyframes pulse-ring {
-      0%   { box-shadow: 0 0 0 0 rgba(92,184,92,.5); }
-      70%  { box-shadow: 0 0 0 10px rgba(92,184,92,0); }
-      100% { box-shadow: 0 0 0 0 rgba(92,184,92,0); }
-    }
-    @keyframes countUp  { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:#F4F1EB;color:#1A1F1A;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  cursor:default;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%;height:100%;object-fit:cover}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:#2B5329}
+::selection{background:#C5E3C0;color:#1A3318}
 
-    .reveal { opacity:0; transform:translateY(28px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity:1; transform:none; }
-    .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; } .d3 { transition-delay:.3s; } .d4 { transition-delay:.4s; }
+/* ── Design Tokens ── */
+:root{
+  /* Palette */
+  --cream:    #F4F1EB;
+  --cream-dk: #EDE9E0;
+  --white:    #FDFCF9;
+  --forest:   #2B5329;
+  --forest2:  #1A3318;
+  --forest3:  #3D7A38;
+  --sage:     #7AAD74;
+  --sage-lt:  #B8D9B4;
+  --sage-pale:#E8F3E6;
+  --gold:     #B8924A;
+  --gold-lt:  #D4AA6A;
+  --ink:      #1A1F1A;
+  --ink2:     #2D352D;
+  --mid:      #5A6B5A;
+  --pale:     #9BAA9B;
+  --rule:     #D8D2C6;
 
-    /* ── Utilities ── */
-    .container { max-width:1160px; margin:0 auto; padding:0 2rem; }
-    .eyebrow { font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--g5); margin-bottom:.6rem; }
-    .sec-title { font-family:var(--fd); font-size:clamp(1.9rem,3.8vw,2.9rem); font-weight:700; line-height:1.15; color:var(--s9); margin-bottom:1.1rem; }
-    .sec-title em { font-style:italic; color:var(--g6); }
-    .sec-sub { font-size:1.05rem; color:var(--s5); max-width:540px; margin:0 auto 3rem; line-height:1.75; text-align:center; }
-    .sec-head { text-align:center; margin-bottom:3.5rem; }
+  /* Type */
+  --serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
 
-    /* ── Buttons ── */
-    .btn-p {
-      display:inline-flex; align-items:center; gap:.55rem;
-      background:var(--g5); color:#fff; font-weight:600; font-size:1rem;
-      padding:.9rem 1.8rem; border-radius:var(--r-md); border:none; cursor:pointer;
-      transition:background .25s, transform .2s, box-shadow .25s;
-      box-shadow:var(--sh-g);
-    }
-    .btn-p svg { width:17px; height:17px; transition:transform .2s; }
-    .btn-p:hover { background:var(--g6); transform:translateY(-2px); box-shadow:0 12px 36px rgba(92,184,92,.35); }
-    .btn-p:hover svg { transform:translateX(4px); }
-    .btn-p.full { width:100%; justify-content:center; }
+  /* Radius */
+  --r0: 0px; --r1: 3px; --r2: 6px; --r3: 12px; --r4: 20px;
 
-    .btn-ghost {
-      display:inline-flex; align-items:center; gap:.5rem;
-      color:#fff; font-weight:500; font-size:.95rem;
-      padding:.9rem 1.4rem; border-radius:var(--r-md);
-      border:1px solid rgba(255,255,255,.3);
-      transition:border-color .2s, background .2s;
-    }
-    .btn-ghost:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.6); }
+  /* Shadow */
+  --sh1: 0 2px 8px rgba(26,31,26,.07);
+  --sh2: 0 6px 24px rgba(26,31,26,.10);
+  --sh3: 0 16px 56px rgba(26,31,26,.14);
+  --sh4: 0 32px 96px rgba(26,31,26,.20);
+  --shg: 0 8px 32px rgba(43,83,41,.28);
+}
 
-    .btn-nav {
-      background:var(--s9); color:#fff; font-weight:600; font-size:.85rem;
-      padding:.55rem 1.3rem; border-radius:999px;
-      transition:background .2s, transform .2s;
-    }
-    .btn-nav:hover { background:var(--g6); transform:translateY(-1px); }
+/* ── Scroll Reveal ── */
+[data-r]{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .85s cubic-bezier(.22,1,.36,1),
+             transform .85s cubic-bezier(.22,1,.36,1);
+}
+[data-r].in{opacity:1;transform:none}
+[data-r][data-d="1"]{transition-delay:.1s}
+[data-r][data-d="2"]{transition-delay:.2s}
+[data-r][data-d="3"]{transition-delay:.3s}
+[data-r][data-d="4"]{transition-delay:.4s}
+[data-r][data-d="5"]{transition-delay:.55s}
 
-    /* ── NAVBAR ── */
-    .navbar {
-      position:fixed; top:0; left:0; right:0; z-index:100;
-      padding:1.1rem 2rem;
-      transition:background .3s, box-shadow .3s, padding .3s;
-    }
-    .navbar.scrolled {
-      background:rgba(255,255,255,.97); backdrop-filter:blur(12px);
-      box-shadow:0 1px 20px rgba(0,0,0,.08); padding:.65rem 2rem;
-    }
-    .nav-inner { max-width:1160px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; }
-    .nav-logo { display:flex; align-items:center; gap:.7rem; }
-    .nav-logo-icon { width:34px; height:34px; background:var(--g5); border-radius:9px; display:flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0; }
-    .nav-logo-icon svg { width:19px; height:19px; }
-    .nav-logo-main { display:block; font-weight:700; font-size:.88rem; color:var(--s9); line-height:1.2; letter-spacing:-.01em; }
-    .nav-logo-sub  { display:block; font-size:.68rem; color:var(--g6); font-weight:500; letter-spacing:.04em; }
-    .nav-links { display:flex; list-style:none; gap:1.8rem; }
-    .nav-link { font-size:.85rem; font-weight:500; color:var(--s7); position:relative; transition:color .2s; }
-    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--g5); transform:scaleX(0); transition:transform .25s; border-radius:2px; }
-    .nav-link:hover { color:var(--g6); }
-    .nav-link:hover::after { transform:scaleX(1); }
+/* ── Global keyframes ── */
+@keyframes hzoom{0%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes slideup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes slidein{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drop{0%{top:-100%}100%{top:200%}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes lineW{from{width:0}to{width:100%}}
 
-    .hamburger { display:none; flex-direction:column; gap:5px; width:26px; padding:4px; }
-    .hamburger span { display:block; height:2px; background:var(--s8); border-radius:2px; transition:transform .3s, opacity .3s; }
-    .hamburger span.x1 { transform:translateY(7px) rotate(45deg); }
-    .hamburger span.x2 { opacity:0; }
-    .hamburger span.x3 { transform:translateY(-7px) rotate(-45deg); }
+/* ════════════════════════════════════════════
+   NAVIGATION
+════════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  transition:background .5s,backdrop-filter .5s,box-shadow .5s,padding .4s;
+  padding:1.6rem 3rem;
+}
+.nav.s{
+  background:rgba(244,241,235,.96);
+  backdrop-filter:blur(24px);
+  padding:1rem 3rem;
+  box-shadow:0 1px 0 var(--rule), var(--sh1);
+}
+.nav-row{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
 
-    .mobile-menu { display:none; flex-direction:column; background:#fff; padding:0 2rem; overflow:hidden; max-height:0; transition:max-height .35s ease, padding .35s; }
-    .mobile-menu.open { max-height:420px; padding:1rem 2rem 1.5rem; }
-    .mobile-link { padding:.7rem 0; font-weight:500; color:var(--s7); border-bottom:1px solid var(--s1); }
-    .m-cta { margin-top:1rem; text-align:center; border-radius:var(--r-md); padding:.85rem; display:block; }
+/* Logo */
+.logo{display:flex;align-items:center;gap:.85rem}
+.logo-icon{
+  width:36px;height:36px;background:var(--forest);
+  border-radius:var(--r1);display:flex;align-items:center;
+  justify-content:center;color:var(--white);flex-shrink:0;
+}
+.logo-icon svg{width:20px;height:20px}
+.logo-name{
+  font-family:var(--serif);font-size:1rem;font-weight:700;
+  letter-spacing:.01em;color:var(--white);
+  transition:color .3s;line-height:1.2;
+}
+.logo-city{
+  font-size:.62rem;font-weight:400;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.52);transition:color .3s;
+  display:block;margin-top:1px;
+}
+.nav.s .logo-name{color:var(--ink)}
+.nav.s .logo-city{color:var(--sage)}
 
-    /* ── HERO ── */
-    .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; }
-    .hero-bg { position:absolute; inset:0; }
-    .hero-bg img { width:100%; height:100%; object-fit:cover; object-position:center 30%; }
-    .hero-overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(135deg, rgba(8,20,12,.83) 0%, rgba(10,25,15,.65) 50%, rgba(25,55,30,.4) 100%);
-    }
-    .hero-content {
-      position:relative; z-index:2;
-      padding:8rem max(2rem,calc((100vw - 1160px)/2 + 2rem)) 6rem;
-      max-width:calc(660px + max(0px,calc((100vw - 1160px)/2 + 2rem)));
-    }
-    .hero-badge {
-      display:inline-flex; align-items:center; gap:.5rem;
-      background:rgba(92,184,92,.13); border:1px solid rgba(92,184,92,.38);
-      color:var(--g4); font-size:.72rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
-      padding:.45rem .95rem; border-radius:999px; margin-bottom:1.4rem;
-      animation:fadeUp .8s ease both;
-    }
-    .hero-dot { width:7px; height:7px; background:var(--g4); border-radius:50%; animation:pulse-ring 2s infinite; }
-    .hero-title {
-      font-family:var(--fd); font-size:clamp(2.8rem,5.5vw,4.8rem);
-      font-weight:900; line-height:1.08; color:#fff; margin-bottom:1.4rem;
-      animation:fadeUp .8s .1s ease both;
-    }
-    .hero-title em { font-style:italic; color:var(--g4); }
-    .hero-sub { font-size:1.05rem; color:rgba(255,255,255,.72); max-width:460px; line-height:1.78; margin-bottom:2.3rem; animation:fadeUp .8s .2s ease both; font-weight:300; }
-    .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp .8s .3s ease both; }
-    .hero-scroll { position:absolute; bottom:2.2rem; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:.4rem; color:rgba(255,255,255,.45); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; animation:fadeIn 1s 1s ease both; }
-    .scroll-line { width:1px; height:36px; background:linear-gradient(to bottom,transparent,rgba(255,255,255,.45)); animation:float 2s ease-in-out infinite; }
-    .hero-card {
-      position:absolute; bottom:2.8rem; right:max(2rem,calc((100vw - 1160px)/2 + 2rem)); z-index:3;
-      background:rgba(255,255,255,.97); border-radius:var(--r-md);
-      padding:.9rem 1.35rem; display:flex; align-items:center; gap:.8rem;
-      box-shadow:var(--sh-lg); animation:fadeUp .9s .5s ease both;
-    }
-    .hero-card-icon { width:38px; height:38px; background:var(--g5); color:#fff; border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:700; flex-shrink:0; }
-    .hero-card-title { font-weight:700; font-size:.87rem; color:var(--s9); }
-    .hero-card-sub   { font-size:.72rem; color:var(--s5); }
+/* Links */
+.nav-links{display:flex;list-style:none;gap:2.4rem}
+.nav-a{
+  font-size:.82rem;font-weight:500;letter-spacing:.02em;
+  color:rgba(255,255,255,.7);transition:color .2s;
+  position:relative;padding-bottom:2px;
+}
+.nav-a::after{
+  content:'';position:absolute;bottom:0;left:0;
+  width:0;height:1px;background:currentColor;
+  transition:width .35s cubic-bezier(.22,1,.36,1);
+}
+.nav-a:hover{color:var(--white)}
+.nav-a:hover::after{width:100%}
+.nav.s .nav-a{color:var(--mid)}
+.nav.s .nav-a:hover{color:var(--forest)}
 
-    /* ── STATS ── */
-    .stats { background:var(--s9); padding:3rem 2rem; }
-    .stats-inner { max-width:1160px; margin:0 auto; display:flex; align-items:center; justify-content:space-around; flex-wrap:wrap; gap:2rem; }
-    .stat-item { text-align:center; }
-    .stat-num { font-family:var(--fd); font-size:2.8rem; font-weight:900; color:#fff; line-height:1; margin-bottom:.2rem; }
-    .stat-num span { color:var(--g4); }
-    .stat-lbl { font-size:.75rem; font-weight:500; color:var(--s4); letter-spacing:.05em; text-transform:uppercase; }
-    .stat-div { width:1px; height:52px; background:rgba(255,255,255,.1); }
+/* CTA pill */
+.nav-rdv{
+  font-size:.8rem;font-weight:600;letter-spacing:.05em;
+  padding:.6rem 1.4rem;border-radius:999px;
+  background:var(--white);color:var(--forest);
+  transition:all .3s;box-shadow:var(--sh1);
+}
+.nav.s .nav-rdv{background:var(--forest);color:var(--white);box-shadow:var(--shg)}
+.nav-rdv:hover{transform:translateY(-1px);box-shadow:var(--sh3)}
 
-    /* ── LE CENTRE ── */
-    .centre { padding:6rem 0; }
-    .centre-grid { display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:center; }
-    .centre-desc { font-size:.97rem; color:var(--s5); line-height:1.8; margin-bottom:1.8rem; }
-    .features { list-style:none; display:flex; flex-direction:column; gap:.7rem; }
-    .feature { display:flex; align-items:flex-start; gap:.7rem; font-size:.93rem; color:var(--s7); }
-    .f-check { width:20px; height:20px; background:var(--g1); color:var(--g6); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.65rem; font-weight:700; flex-shrink:0; margin-top:2px; }
-    .g-main { border-radius:var(--r-lg); overflow:hidden; height:300px; position:relative; box-shadow:var(--sh-md); }
-    .g-main img { width:100%; height:100%; object-fit:cover; transition:transform .6s; }
-    .g-main:hover img { transform:scale(1.04); }
-    .g-side { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; margin-top:.9rem; }
-    .g-sm { border-radius:var(--r-md); overflow:hidden; height:148px; position:relative; box-shadow:var(--sh-sm); }
-    .g-sm img { width:100%; height:100%; object-fit:cover; transition:transform .6s; }
-    .g-sm:hover img { transform:scale(1.06); }
-    .g-cap { position:absolute; bottom:.65rem; left:.65rem; background:rgba(0,0,0,.52); color:#fff; font-size:.65rem; font-weight:600; letter-spacing:.05em; padding:.22rem .55rem; border-radius:4px; text-transform:uppercase; }
+/* Mobile */
+.hbg{display:none;flex-direction:column;gap:5px;padding:4px 2px;width:28px}
+.hbg span{
+  display:block;height:1.5px;border-radius:1px;
+  background:var(--white);transition:all .32s;
+}
+.nav.s .hbg span{background:var(--ink)}
+.hbg.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hbg.x span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hbg.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{
+  display:none;flex-direction:column;
+  background:var(--white);
+  overflow:hidden;max-height:0;
+  transition:max-height .45s cubic-bezier(.22,1,.36,1);
+  border-bottom:1px solid transparent;
+}
+.mob.open{max-height:520px;border-bottom-color:var(--rule)}
+.mob-a{
+  display:block;padding:.85rem 3rem;font-weight:500;
+  font-size:.93rem;color:var(--mid);
+  border-bottom:1px solid var(--cream);transition:color .2s;
+}
+.mob-a:hover{color:var(--forest)}
+.mob-rdv{
+  display:block;margin:1.1rem 3rem 1.6rem;text-align:center;
+  padding:.9rem;background:var(--forest);color:var(--white);
+  border-radius:var(--r2);font-weight:600;font-size:.9rem;
+  transition:background .2s;
+}
+.mob-rdv:hover{background:var(--forest3)}
 
-    /* ── SERVICES ── */
-    .services { padding:6rem 0; background:var(--s0); }
-    .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.3rem; }
-    .srv-card { background:#fff; border-radius:var(--r-lg); padding:1.8rem; border:1px solid var(--s2); position:relative; overflow:hidden; transition:box-shadow .3s, transform .3s, border-color .3s; }
-    .srv-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--g5),var(--g4)); transform:scaleX(0); transition:transform .3s; transform-origin:left; }
-    .srv-card:hover { box-shadow:var(--sh-md); transform:translateY(-4px); border-color:var(--g2); }
-    .srv-card:hover::before { transform:scaleX(1); }
-    .srv-icon { font-size:1.9rem; margin-bottom:.65rem; }
-    .srv-tag { font-size:.63rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--g6); background:var(--g1); border-radius:999px; padding:.18rem .55rem; display:inline-block; margin-bottom:.8rem; }
-    .srv-title { font-family:var(--fd); font-size:1.2rem; font-weight:700; color:var(--s9); margin-bottom:.55rem; }
-    .srv-desc { font-size:.88rem; color:var(--s5); line-height:1.7; }
+/* ════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:100vh;
+  display:grid;grid-template-rows:1fr auto;
+  overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{
+  width:100%;height:100%;
+  animation:hzoom 16s ease-out both;
+}
+/* Multi-layer sophisticated overlay */
+.hero-ov{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.18) 0%, transparent 30%),
+    linear-gradient(0deg,   rgba(26,31,26,.92) 0%, rgba(26,31,26,.4) 45%, transparent 75%);
+}
+/* Subtle warm tint */
+.hero-tint{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 70% 40%, rgba(43,83,41,.12), transparent);
+}
+/* Grain */
+.hero-grain{
+  position:absolute;inset:0;pointer-events:none;
+  opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+}
 
-    /* ── PHOTO SHOWCASE ── */
-    .showcase { background: var(--s9); padding: 6rem 0; }
-    .showcase-header { margin-bottom: 3rem; }
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: 1.6fr 0.8fr;
-      grid-template-rows: auto auto;
-      gap: 1rem;
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .sc-large { grid-row: span 2; border-radius: var(--r-lg); overflow: hidden; position: relative; height: 560px; }
-    .sc-stack { display: flex; flex-direction: column; gap: 1rem; }
-    .sc-small { border-radius: var(--r-lg); overflow: hidden; position: relative; flex: 1; min-height: 0; height: 268px; }
-    .sc-medium { border-radius: var(--r-lg); overflow: hidden; position: relative; height: 180px; }
-    .sc-large img, .sc-small img, .sc-medium img { width:100%; height:100%; object-fit:cover; transition: transform .7s ease; }
-    .sc-large:hover img, .sc-small:hover img, .sc-medium:hover img { transform: scale(1.05); }
-    .sc-ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,15,8,.85) 0%, rgba(5,15,8,.2) 50%, transparent 100%); }
-    .sc-label { position: absolute; bottom: 1.2rem; left: 1.3rem; color: #fff; }
-    .sc-tag { font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; background: var(--g5); color: #fff; padding: .18rem .55rem; border-radius: 999px; display: inline-block; margin-bottom: .4rem; }
-    .sc-title { font-family: var(--fd); font-size: 1.25rem; font-weight: 700; line-height: 1.2; }
-    .sc-large .sc-title { font-size: 1.75rem; }
-    .sc-sub { font-size: .78rem; color: rgba(255,255,255,.72); margin-top: .25rem; max-width: 260px; line-height: 1.5; }
-    .sc-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; grid-column: span 2; }
+/* Content layout */
+.hero-body{
+  position:relative;z-index:2;
+  align-self:end;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  max-width:1280px;width:100%;margin:0 auto;
+  padding:0 3rem 6rem;
+}
+.hero-left{}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sage-lt);margin-bottom:1.4rem;
+  animation:slidein .9s .1s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-kicker-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--sage);
+  animation:blink 3s ease-in-out infinite;
+}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(3.2rem,5.8vw,5.6rem);
+  font-weight:400;line-height:1.04;
+  letter-spacing:-.03em;color:var(--white);
+  margin-bottom:1.8rem;
+  animation:slideup 1s .18s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-h1 em{
+  font-style:italic;
+  /* Gradient text for the italic */
+  background:linear-gradient(135deg, var(--sage-lt), var(--gold-lt));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-p{
+  font-size:1rem;font-weight:300;line-height:1.82;
+  color:rgba(255,255,255,.6);max-width:400px;
+  margin-bottom:2.6rem;
+  animation:slideup 1s .3s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-btns{
+  display:flex;gap:.8rem;flex-wrap:wrap;
+  animation:slideup 1s .42s cubic-bezier(.22,1,.36,1) both;
+}
+.btn-hero-p{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.88rem;font-weight:600;letter-spacing:.02em;
+  padding:.9rem 1.9rem;border-radius:var(--r1);
+  background:var(--forest);color:var(--white);
+  box-shadow:var(--shg);
+  transition:background .25s,transform .25s,box-shadow .25s;
+}
+.btn-hero-p svg{width:15px;height:15px;transition:transform .25s}
+.btn-hero-p:hover{background:var(--forest3);transform:translateY(-2px);box-shadow:0 16px 40px rgba(43,83,41,.38)}
+.btn-hero-p:hover svg{transform:translateX(4px)}
+.btn-hero-s{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.86rem;font-weight:400;
+  padding:.9rem 1.6rem;border-radius:var(--r1);
+  border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.82);
+  transition:border-color .25s,background .25s;
+}
+.btn-hero-s:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
 
-    @media(max-width:768px) {
-      .showcase-grid { grid-template-columns: 1fr; }
-      .sc-large { height: 300px; grid-row: span 1; }
-      .sc-stack { flex-direction: row; }
-      .sc-small { height: 180px; }
-      .sc-bottom { grid-template-columns: 1fr; grid-column: span 1; }
-    }
+/* Hero right — vertical stats strip */
+.hero-right{
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;
+  gap:0;padding-bottom:.3rem;
+  animation:fadein 1s .6s both;
+}
+.hero-stat{
+  display:flex;flex-direction:column;align-items:flex-end;
+  padding:1.1rem 0;border-top:1px solid rgba(255,255,255,.1);
+  width:100%;max-width:220px;
+}
+.hero-stat:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+.hero-stat-n{
+  font-family:var(--serif);font-size:2.8rem;font-weight:700;
+  color:var(--white);line-height:1;
+  display:flex;align-items:baseline;gap:.1rem;
+}
+.hero-stat-sup{font-size:1.3rem;color:var(--gold-lt)}
+.hero-stat-l{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.25rem}
 
-    /* ── TECHNOLOGIE ── */
-    .techno { padding:6rem 0; }
-    .rooms { display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem; margin-bottom:1.2rem; }
-    .room { border-radius:var(--r-lg); overflow:hidden; position:relative; height:268px; box-shadow:var(--sh-sm); transition:box-shadow .3s, transform .3s; }
-    .room.feat { grid-column:span 2; height:380px; }
-    .room:hover { box-shadow:var(--sh-lg); transform:scale(1.01); }
-    .room img { width:100%; height:100%; object-fit:cover; transition:transform .7s; }
-    .room:hover img { transform:scale(1.06); }
-    .room-ov { position:absolute; inset:0; background:linear-gradient(to top,rgba(8,18,10,.75) 0%,transparent 60%); }
-    .room-info { position:absolute; bottom:1.1rem; left:1.4rem; color:#fff; }
-    .room-lbl { font-family:var(--fd); font-size:1.4rem; font-weight:700; }
-    .room.feat .room-lbl { font-size:1.9rem; }
-    .room-sub { font-size:.75rem; color:rgba(255,255,255,.72); margin-top:.2rem; letter-spacing:.04em; }
-    .equip-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
-    .equip { display:flex; gap:.9rem; align-items:center; background:var(--s0); border-radius:var(--r-md); padding:1.1rem; border:1px solid var(--s2); }
-    .equip img { width:60px; height:60px; border-radius:var(--r-sm); object-fit:cover; flex-shrink:0; }
-    .equip-name { font-weight:700; font-size:.85rem; color:var(--s9); margin-bottom:.22rem; }
-    .equip-desc { font-size:.75rem; color:var(--s5); }
+/* Bottom gold bar */
+.hero-gold-bar{
+  position:relative;z-index:3;height:3px;
+  background:linear-gradient(90deg,var(--forest2),var(--gold),var(--sage),var(--forest2));
+  background-size:200% 100%;
+  animation:fadein .5s 1s both;
+}
 
-    /* ── TESTIMONIALS ── */
-    .testi { padding:6rem 0; background:var(--g1); position:relative; overflow:hidden; }
-    .testi::before { content:'"'; position:absolute; top:-3rem; left:50%; transform:translateX(-50%); font-family:var(--fd); font-size:18rem; color:rgba(92,184,92,.08); line-height:1; pointer-events:none; }
-    .t-carousel { position:relative; max-width:640px; margin:0 auto 1.8rem; min-height:210px; }
-    .t-item { position:absolute; inset:0; opacity:0; transform:translateY(14px); transition:opacity .55s ease, transform .55s ease; pointer-events:none; text-align:center; }
-    .t-item.on { opacity:1; transform:none; pointer-events:auto; }
-    .t-q { font-family:var(--fd); font-size:3.5rem; color:var(--g5); line-height:.8; margin-bottom:.4rem; }
-    .t-text { font-size:1.05rem; color:var(--s7); line-height:1.8; font-style:italic; margin-bottom:1.4rem; }
-    .t-author { display:inline-flex; align-items:center; gap:.7rem; }
-    .t-av { width:38px; height:38px; border-radius:50%; background:var(--g5); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:.95rem; }
-    .t-name { font-weight:700; font-size:.87rem; color:var(--s9); }
-    .t-role { font-size:.73rem; color:var(--s5); }
-    .t-dots { display:flex; justify-content:center; gap:.45rem; margin-top:5rem; }
-    .dot { width:7px; height:7px; border-radius:50%; background:rgba(92,184,92,.3); cursor:pointer; transition:background .2s, width .3s; padding:0; border:none; }
-    .dot.on { background:var(--g6); width:22px; border-radius:4px; }
+/* Scroll indicator */
+.scroll-ind{
+  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.45rem;
+  color:rgba(255,255,255,.35);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  z-index:3;animation:fadein 1.5s 1.4s both;
+}
+.scroll-pipe{
+  width:1px;height:40px;background:rgba(255,255,255,.12);
+  position:relative;overflow:hidden;
+}
+.scroll-pipe::after{
+  content:'';position:absolute;top:-50%;left:0;right:0;height:50%;
+  background:rgba(255,255,255,.5);
+  animation:drop 2.2s ease-in-out infinite;
+}
 
-    /* ── CONTACT ── */
-    .contact { padding:6rem 0; background:var(--s9); position:relative; overflow:hidden; }
-    .contact::before { content:''; position:absolute; top:-80px; right:-80px; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle,rgba(92,184,92,.11) 0%,transparent 70%); pointer-events:none; }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:start; }
-    .ci-details { display:flex; flex-direction:column; gap:1.1rem; margin-top:.5rem; }
-    .ci-row { display:flex; gap:.9rem; align-items:flex-start; }
-    .ci-icon { font-size:1.15rem; width:42px; height:42px; background:rgba(92,184,92,.1); border-radius:var(--r-sm); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .ci-lbl { font-size:.68rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--g4); margin-bottom:.22rem; }
-    .ci-val { color:rgba(255,255,255,.83); font-size:.93rem; }
-    .form-wrap { background:#fff; border-radius:var(--r-xl); padding:2.3rem; box-shadow:var(--sh-lg); }
-    .cform { display:flex; flex-direction:column; gap:1.1rem; }
-    .f-row { display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
-    .fg { display:flex; flex-direction:column; gap:.35rem; }
-    .fg label { font-size:.77rem; font-weight:600; color:var(--s7); letter-spacing:.03em; }
-    .fg input, .fg select, .fg textarea {
-      font-family:var(--fb); font-size:.93rem; padding:.7rem .95rem;
-      border:1px solid var(--s2); border-radius:var(--r-sm);
-      background:var(--s0); color:var(--s8); outline:none;
-      transition:border-color .2s, box-shadow .2s; width:100%;
-    }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--g5); box-shadow:0 0 0 3px rgba(92,184,92,.12); background:#fff; }
-    .fg textarea { resize:vertical; }
-    .fsuccess { text-align:center; padding:2.5rem 1rem; }
-    .fsuccess-icon { width:56px; height:56px; border-radius:50%; background:var(--g1); color:var(--g6); font-size:1.4rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
-    .fsuccess h3 { font-family:var(--fd); font-size:1.4rem; color:var(--s9); margin-bottom:.4rem; }
-    .fsuccess p  { color:var(--s5); }
+/* ════════════════════════════════════════════
+   TICKER
+════════════════════════════════════════════ */
+.ticker{background:var(--forest2);overflow:hidden;padding:.78rem 0}
+.ticker-track{display:flex;width:max-content;animation:ticker 36s linear infinite}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:.8rem;
+  padding:0 2.4rem;white-space:nowrap;
+  font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.52);
+}
+.ticker-gem{color:var(--gold);font-size:.65rem}
 
-    /* ── FOOTER ── */
-    .footer { background:#060e08; padding:2rem 2rem; border-top:1px solid rgba(255,255,255,.05); text-align:center; }
-    .footer-logo { display:inline-flex; align-items:center; gap:.5rem; color:#fff; font-weight:700; margin-bottom:.5rem; }
-    .footer-tooth { width:22px; height:22px; color:var(--g5); }
-    .f-copy    { color:var(--s5); font-size:.78rem; margin-bottom:.25rem; }
-    .f-tagline { color:var(--s5); font-size:.72rem; font-style:italic; }
+/* ════════════════════════════════════════════
+   SECTION LABELS (reusable)
+════════════════════════════════════════════ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--forest3);margin-bottom:.9rem;
+}
+.eyebrow::before{
+  content:'';display:block;width:26px;height:1px;
+  background:var(--forest3);flex-shrink:0;
+}
+.eyebrow.inv{color:var(--sage-lt)}
+.eyebrow.inv::before{background:var(--sage-lt)}
 
-    /* ── RESPONSIVE ── */
-    @media(max-width:1024px) {
-      .centre-grid { grid-template-columns:1fr; gap:2.8rem; }
-      .srv-grid { grid-template-columns:repeat(2,1fr); }
-      .contact-grid { grid-template-columns:1fr; gap:2.8rem; }
-      .equip-strip { grid-template-columns:1fr; }
-    }
-    @media(max-width:768px) {
-      .nav-links, .btn-nav { display:none; }
-      .hamburger { display:flex; }
-      .mobile-menu { display:flex; }
-      .hero-card, .hero-scroll { display:none; }
-      .hero-content { padding:7rem 1.5rem 5rem; }
-      .stat-div { display:none; }
-      .srv-grid { grid-template-columns:1fr; }
-      .rooms { grid-template-columns:1fr; }
-      .room.feat { grid-column:span 1; height:250px; }
-      .g-side { grid-template-columns:1fr; }
-      .f-row { grid-template-columns:1fr; }
-      section { padding:4rem 0; }
-    }
-    @media(max-width:480px) {
-      .hero-actions { flex-direction:column; }
-      .btn-ghost { justify-content:center; }
-      .form-wrap { padding:1.5rem; }
-    }
-  </style>
+/* ════════════════════════════════════════════
+   ABOUT / LE CENTRE
+════════════════════════════════════════════ */
+.about{
+  padding:10rem 0;background:var(--cream);
+  position:relative;overflow:hidden;
+}
+/* Large background numeral — editorial detail */
+.about::before{
+  content:'CDP';
+  position:absolute;bottom:-3rem;right:-1rem;
+  font-family:var(--serif);font-size:18rem;font-weight:700;
+  color:rgba(43,83,41,.04);line-height:1;
+  pointer-events:none;letter-spacing:-.05em;
+  user-select:none;
+}
+.about-inner{
+  max-width:1280px;margin:0 auto;padding:0 3rem;
+  display:grid;grid-template-columns:5fr 6fr;gap:8rem;align-items:start;
+}
+.about-title{
+  font-family:var(--serif);
+  font-size:clamp(2.4rem,4.2vw,3.8rem);
+  font-weight:400;line-height:1.1;
+  letter-spacing:-.025em;color:var(--ink);
+  margin-bottom:1.4rem;
+}
+.about-title em{font-style:italic;color:var(--forest)}
+.about-body{
+  font-size:.97rem;font-weight:300;line-height:1.88;
+  color:var(--mid);margin-bottom:2.4rem;
+}
+/* Numbered feature rows */
+.feat-list{margin-top:2rem}
+.feat-row{
+  display:grid;grid-template-columns:32px 1fr;gap:1rem;
+  padding:1.1rem 0;
+  border-bottom:1px solid var(--rule);
+}
+.feat-row:first-child{border-top:1px solid var(--rule)}
+.feat-num{
+  font-family:var(--serif);font-size:.9rem;font-weight:700;
+  color:var(--forest);padding-top:.18rem;
+}
+.feat-text strong{
+  display:block;font-size:.92rem;font-weight:600;
+  color:var(--ink2);margin-bottom:.2rem;
+}
+.feat-text span{font-size:.85rem;color:var(--mid);line-height:1.65}
+
+/* Photo grid right */
+.about-photos{}
+.aph-main{
+  position:relative;border-radius:var(--r2);overflow:hidden;
+  height:400px;margin-bottom:.7rem;
+}
+.aph-main img{width:100%;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.aph-main:hover img{transform:scale(1.04)}
+.aph-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:2.5rem 1.4rem .6rem;
+  background:linear-gradient(to top,rgba(26,31,26,.72),transparent);
+  font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.72);
+}
+.aph-row{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.aph-sm{
+  position:relative;border-radius:var(--r2);overflow:hidden;height:160px;
+}
+.aph-sm img{width:100%;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.aph-sm:hover img{transform:scale(1.06)}
+.aph-sm-cap{
+  position:absolute;bottom:.55rem;left:.7rem;
+  font-size:.58rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.78);
+  background:rgba(26,31,26,.45);
+  padding:.18rem .5rem;border-radius:1px;
+  backdrop-filter:blur(6px);
+}
+
+/* ════════════════════════════════════════════
+   SERVICES — horizontal card strip
+════════════════════════════════════════════ */
+.services{
+  padding:10rem 0;background:var(--white);
+  position:relative;
+}
+.services-hd{
+  max-width:1280px;margin:0 auto;padding:0 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;
+  margin-bottom:4rem;
+}
+.srv-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,3.8vw,3.4rem);
+  font-weight:400;line-height:1.1;letter-spacing:-.025em;color:var(--ink);
+}
+.srv-title em{font-style:italic;color:var(--forest)}
+.srv-sub{
+  font-size:.95rem;font-weight:300;line-height:1.8;
+  color:var(--mid);max-width:380px;
+}
+
+/* Cards — 5 column horizontal strip */
+.srv-strip{
+  max-width:1280px;margin:0 auto;padding:0 3rem;
+  display:grid;grid-template-columns:repeat(5,1fr);
+  border:1px solid var(--rule);border-radius:var(--r2);overflow:hidden;
+}
+.srv-card{
+  padding:2.6rem 1.8rem;position:relative;
+  border-right:1px solid var(--rule);
+  transition:background .4s;
+  overflow:hidden;
+}
+.srv-card:last-child{border-right:none}
+/* Top accent line — slides in on hover */
+.srv-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--forest),var(--sage));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.srv-card:hover{background:var(--sage-pale)}
+.srv-card:hover::before{transform:scaleX(1)}
+.srv-card-n{
+  font-family:var(--serif);font-size:2.6rem;font-weight:700;
+  color:var(--rule);line-height:1;margin-bottom:1.6rem;
+  transition:color .3s;
+}
+.srv-card:hover .srv-card-n{color:var(--sage-lt)}
+.srv-icon{font-size:1.6rem;margin-bottom:.7rem;display:block}
+.srv-name{
+  font-family:var(--serif);font-size:1.05rem;font-weight:700;
+  color:var(--ink);margin-bottom:.55rem;line-height:1.3;
+}
+.srv-desc{font-size:.8rem;color:var(--pale);line-height:1.75}
+.srv-badge{
+  display:inline-block;margin-top:1rem;
+  font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--forest);border:1px solid var(--sage-lt);
+  padding:.15rem .5rem;border-radius:1px;
+}
+
+/* ════════════════════════════════════════════
+   SHOWCASE — Editorial photo mosaic
+════════════════════════════════════════════ */
+.showcase{background:var(--ink2);padding:0}
+
+.showcase-intro{
+  max-width:1280px;margin:0 auto;
+  padding:7rem 3rem 3.5rem;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:4rem;
+}
+.showcase-intro .eyebrow{color:var(--sage-lt)}
+.showcase-intro .eyebrow::before{background:var(--sage-lt)}
+.showcase-t{
+  font-family:var(--serif);
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:400;line-height:1.1;
+  letter-spacing:-.025em;color:var(--white);
+}
+.showcase-t em{font-style:italic;color:var(--sage-lt)}
+.showcase-desc{
+  font-size:.88rem;font-weight:300;line-height:1.82;
+  color:rgba(255,255,255,.45);max-width:280px;text-align:right;
+}
+
+/* Asymmetric photo mosaic */
+.sc-mosaic{
+  display:grid;
+  grid-template-columns: 2fr 1.1fr 1.1fr;
+  grid-template-rows: 340px 260px;
+  gap:2px;
+}
+.sc-p{position:relative;overflow:hidden;cursor:pointer}
+.sc-p img{
+  width:100%;height:100%;
+  transition:transform 1s cubic-bezier(.22,1,.36,1);
+}
+.sc-p:hover img{transform:scale(1.06)}
+/* Dark gradient overlay */
+.sc-p-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(170deg, transparent 40%, rgba(26,31,26,.85) 100%);
+  transition:opacity .4s;
+}
+.sc-p:hover .sc-p-ov{opacity:.8}
+.sc-p-info{position:absolute;bottom:1.3rem;left:1.4rem;color:var(--white)}
+.sc-tag{
+  display:inline-block;margin-bottom:.4rem;
+  font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--forest);color:var(--white);
+  padding:.15rem .55rem;border-radius:1px;
+}
+.sc-title{
+  font-family:var(--serif);font-size:1.25rem;
+  font-weight:400;line-height:1.2;
+}
+.sc-title.lg{font-size:1.75rem}
+.sc-sub{font-size:.72rem;color:rgba(255,255,255,.58);margin-top:.2rem}
+/* Tall cell — spans 2 rows */
+.sc-tall{grid-row:span 2}
+
+/* Bottom photo strip */
+.sc-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;border-top:2px solid var(--ink2);
+}
+.sc-strip-p{position:relative;overflow:hidden;height:210px}
+.sc-strip-p img{width:100%;height:100%;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.sc-strip-p:hover img{transform:scale(1.07)}
+.sc-strip-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(26,31,26,.75),transparent 55%);
+}
+.sc-strip-info{position:absolute;bottom:1.1rem;left:1.2rem;color:var(--white)}
+.sc-strip-name{
+  font-family:var(--serif);font-size:.98rem;
+  font-weight:400;margin-top:.3rem;
+}
+
+/* ════════════════════════════════════════════
+   PLATEAU TECHNIQUE
+════════════════════════════════════════════ */
+.techno{padding:10rem 0;background:var(--cream)}
+.techno-hd{
+  max-width:1280px;margin:0 auto;padding:0 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;
+  margin-bottom:4rem;
+}
+.techno-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,3.8vw,3.4rem);
+  font-weight:400;line-height:1.1;letter-spacing:-.025em;color:var(--ink);
+}
+.techno-title em{font-style:italic;color:var(--forest)}
+.techno-note{
+  font-size:.92rem;font-weight:300;line-height:1.8;
+  color:var(--mid);max-width:380px;
+}
+
+/* Room grid */
+.rooms-wrap{max-width:1280px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.room-c{
+  position:relative;overflow:hidden;
+  border-radius:var(--r2);height:295px;
+  box-shadow:var(--sh2);
+  transition:box-shadow .4s,transform .4s;
+}
+.room-c.wide{grid-column:span 2;height:440px}
+.room-c:hover{box-shadow:var(--sh4);transform:translateY(-3px)}
+.room-c img{width:100%;height:100%;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.room-c:hover img{transform:scale(1.05)}
+.room-c-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(26,31,26,.85) 0%, rgba(26,31,26,.06) 50%, transparent 100%);
+}
+.room-num-bg{
+  position:absolute;top:1rem;right:1.4rem;
+  font-family:var(--serif);font-size:4.5rem;font-weight:700;
+  color:rgba(255,255,255,.08);line-height:1;user-select:none;
+}
+.room-c.wide .room-num-bg{font-size:7rem}
+.room-info{position:absolute;bottom:1.4rem;left:1.6rem;color:var(--white)}
+.room-title{
+  font-family:var(--serif);font-size:1.5rem;
+  font-weight:400;letter-spacing:-.01em;margin-bottom:.2rem;
+}
+.room-c.wide .room-title{font-size:2.2rem}
+.room-spec{
+  font-size:.68rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--sage-lt);
+}
+
+/* Equipment strip */
+.equip-strip{
+  max-width:1280px;margin:1rem auto 0;padding:0 3rem;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+}
+.equip-c{
+  display:flex;gap:1rem;align-items:center;
+  background:var(--white);border-radius:var(--r2);
+  padding:1.3rem;border:1px solid var(--rule);
+  transition:box-shadow .3s,border-color .3s,transform .3s;
+}
+.equip-c:hover{box-shadow:var(--sh2);border-color:var(--sage-lt);transform:translateY(-2px)}
+.equip-thumb{
+  width:64px;height:64px;border-radius:var(--r2);overflow:hidden;flex-shrink:0;
+}
+.equip-name{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:.22rem}
+.equip-desc{font-size:.76rem;color:var(--pale)}
+
+/* ════════════════════════════════════════════
+   TESTIMONIALS
+════════════════════════════════════════════ */
+.testi{
+  padding:10rem 0;
+  background:var(--forest);
+  position:relative;overflow:hidden;
+}
+/* Giant background quote mark */
+.testi-bg-q{
+  position:absolute;top:-4rem;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-size:32rem;font-weight:700;
+  color:rgba(255,255,255,.03);line-height:1;pointer-events:none;
+  user-select:none;
+}
+/* Diagonal decorative line */
+.testi::after{
+  content:'';position:absolute;
+  top:0;right:-80px;width:2px;height:100%;
+  background:linear-gradient(to bottom,transparent,rgba(255,255,255,.06),transparent);
+  transform:rotate(12deg);
+}
+.testi-inner{
+  max-width:820px;margin:0 auto;padding:0 3rem;
+  text-align:center;position:relative;z-index:1;
+}
+.testi-title{
+  font-family:var(--serif);
+  font-size:clamp(2rem,4vw,3rem);font-weight:400;
+  color:var(--white);line-height:1.2;
+  margin-bottom:4rem;
+}
+.testi-title em{font-style:italic;color:var(--sage-lt)}
+.t-stage{position:relative;min-height:215px;margin-bottom:2.2rem}
+.t-card{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .65s ease,transform .65s ease;
+  pointer-events:none;
+}
+.t-card.on{opacity:1;transform:none;pointer-events:auto}
+.t-stars{
+  display:flex;gap:.25rem;margin-bottom:1.2rem;
+  font-size:.85rem;color:var(--gold-lt);
+}
+.t-text{
+  font-family:var(--serif);
+  font-size:1.18rem;font-weight:400;font-style:italic;
+  color:rgba(255,255,255,.85);line-height:1.85;
+  margin-bottom:1.8rem;max-width:640px;
+}
+.t-who{display:inline-flex;align-items:center;gap:.85rem}
+.t-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  font-family:var(--serif);font-size:1.05rem;font-weight:700;
+  color:var(--white);display:flex;align-items:center;justify-content:center;
+}
+.t-name{font-weight:600;font-size:.88rem;color:var(--white);text-align:left}
+.t-role{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.06rem}
+.t-dots{display:flex;justify-content:center;gap:.4rem}
+.t-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.2);
+  padding:0;border:none;cursor:pointer;
+  transition:all .35s;
+}
+.t-dot.on{background:var(--white);width:22px;border-radius:3px}
+
+/* ════════════════════════════════════════════
+   CONTACT
+════════════════════════════════════════════ */
+.contact{
+  padding:10rem 0;background:var(--ink);
+  position:relative;overflow:hidden;
+}
+/* Background glow */
+.contact::before{
+  content:'';position:absolute;
+  top:-240px;right:-160px;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle, rgba(43,83,41,.14) 0%, transparent 60%);
+  pointer-events:none;
+}
+.contact-wrap{
+  max-width:1280px;margin:0 auto;padding:0 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
+}
+.contact-eyebrow{color:var(--sage-lt)}
+.contact-eyebrow::before{background:var(--sage-lt)}
+.contact-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,3.8vw,3.4rem);
+  font-weight:400;line-height:1.1;letter-spacing:-.025em;
+  color:var(--white);margin-bottom:1.1rem;
+}
+.contact-title em{font-style:italic;color:var(--sage-lt)}
+.contact-p{
+  font-size:.93rem;font-weight:300;line-height:1.85;
+  color:rgba(255,255,255,.46);margin-bottom:2.6rem;
+}
+.ci-rows{}
+.ci-row{
+  display:flex;gap:1.1rem;align-items:flex-start;
+  padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.06);
+}
+.ci-row:first-child{border-top:1px solid rgba(255,255,255,.06)}
+.ci-ico-box{
+  width:40px;height:40px;border-radius:var(--r1);
+  background:rgba(61,122,56,.18);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;flex-shrink:0;
+}
+.ci-lbl{
+  font-size:.63rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:.25rem;
+}
+.ci-val{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.6}
+
+/* Form card */
+.form-box{
+  background:var(--cream);border-radius:var(--r3);
+  padding:3rem;box-shadow:var(--sh4);
+  border:1px solid var(--rule);
+}
+.form-box-title{
+  font-family:var(--serif);font-size:1.5rem;font-weight:700;
+  color:var(--ink);margin-bottom:.3rem;
+}
+.form-box-sub{font-size:.82rem;color:var(--pale);margin-bottom:2.2rem}
+.form-fields{display:flex;flex-direction:column;gap:1.1rem}
+.f-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.3rem}
+.fg label{
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--mid);
+}
+.fg input,.fg select,.fg textarea{
+  font-family:var(--sans);font-size:.9rem;
+  padding:.78rem 1rem;
+  border:1.5px solid var(--rule);border-radius:var(--r1);
+  background:var(--white);color:var(--ink);
+  outline:none;width:100%;
+  transition:border-color .25s,box-shadow .25s;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--forest);
+  box-shadow:0 0 0 3px rgba(43,83,41,.10);
+}
+.fg textarea{resize:vertical}
+.btn-submit{
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+  width:100%;padding:.95rem;border-radius:var(--r1);
+  background:var(--forest);color:var(--white);
+  font-size:.9rem;font-weight:600;letter-spacing:.02em;
+  border:none;cursor:pointer;
+  transition:background .25s,transform .25s,box-shadow .25s;
+  box-shadow:var(--shg);
+}
+.btn-submit svg{width:15px;height:15px;transition:transform .25s}
+.btn-submit:hover{background:var(--forest3);transform:translateY(-2px);box-shadow:0 14px 36px rgba(43,83,41,.36)}
+.btn-submit:hover svg{transform:translateX(4px)}
+.form-ok{text-align:center;padding:3rem 1rem}
+.form-ok-ico{
+  width:62px;height:62px;border-radius:50%;
+  background:var(--sage-pale);color:var(--forest);
+  font-size:1.5rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.1rem;
+}
+.form-ok h3{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:.4rem}
+.form-ok p{color:var(--pale);font-size:.88rem}
+
+/* ════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════ */
+.footer{background:#060d07;padding:4rem 3rem 2.5rem}
+.footer-grid{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:4rem;
+  padding-bottom:2.8rem;border-bottom:1px solid rgba(255,255,255,.05);
+  margin-bottom:1.8rem;
+}
+.ft-brand-row{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.ft-icon{width:32px;height:32px;background:var(--forest);border-radius:var(--r1);display:flex;align-items:center;justify-content:center;color:var(--white)}
+.ft-icon svg{width:17px;height:17px}
+.ft-name{font-family:var(--serif);font-size:.98rem;font-weight:700;color:var(--white)}
+.ft-tag{font-size:.78rem;color:rgba(255,255,255,.28);line-height:1.75;font-style:italic;max-width:210px}
+.ft-col-h{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1.1rem}
+.ft-links{display:flex;flex-direction:column;gap:.55rem}
+.ft-link{font-size:.82rem;color:rgba(255,255,255,.42);transition:color .2s}
+.ft-link:hover{color:var(--sage-lt)}
+.ft-ct{font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.95}
+.ft-ct a{color:rgba(255,255,255,.38);transition:color .2s}
+.ft-ct a:hover{color:var(--sage-lt)}
+.ft-bottom{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.ft-copy{font-size:.72rem;color:rgba(255,255,255,.17);letter-spacing:.04em}
+.ft-motto{font-size:.7rem;color:rgba(255,255,255,.13);font-style:italic}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════ */
+@media(max-width:1100px){
+  .about-inner{gap:5rem}
+  .srv-strip{grid-template-columns:repeat(3,1fr)}
+  .srv-card:nth-child(3){border-right:none}
+  .srv-card:nth-child(4){border-top:1px solid var(--rule)}
+  .sc-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:280px 260px}
+  .sc-tall{grid-row:span 1}
+}
+@media(max-width:960px){
+  .hero-body{grid-template-columns:1fr;gap:2rem}
+  .hero-right{flex-direction:row;align-items:flex-end;max-width:100%;justify-content:flex-start}
+  .hero-stat{align-items:flex-start;max-width:none;flex:1;padding:1rem .5rem}
+  .about-inner{grid-template-columns:1fr;gap:4rem}
+  .services-hd{grid-template-columns:1fr;gap:1.5rem}
+  .techno-hd{grid-template-columns:1fr;gap:1.5rem}
+  .contact-wrap{grid-template-columns:1fr;gap:3.5rem}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .rooms-wrap{grid-template-columns:1fr}
+  .room-c.wide{grid-column:span 1;height:280px}
+  .equip-strip{grid-template-columns:1fr}
+  .sc-strip{grid-template-columns:1fr 1fr}
+  .showcase-intro{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .showcase-desc{text-align:left;max-width:440px}
+}
+@media(max-width:768px){
+  .nav-links,.nav-rdv{display:none}
+  .hbg{display:flex}
+  .mob{display:flex}
+  .hero-right,.scroll-ind{display:none}
+  .hero-body{padding:0 1.5rem 5rem}
+  .nav{padding:1.2rem 1.5rem}
+  .nav.s{padding:.8rem 1.5rem}
+  .mob-a{padding:.8rem 1.5rem}
+  .mob-rdv{margin:1rem 1.5rem 1.4rem}
+  .about,.services,.techno,.testi,.contact{padding:6rem 0}
+  .about-inner,.srv-strip,.rooms-wrap,.equip-strip,.contact-wrap,.footer-grid{padding:0 1.5rem}
+  .services-hd,.techno-hd,.showcase-intro,.sc-mosaic,.sc-strip,.testi-inner{padding:0 1.5rem}
+  .srv-strip{grid-template-columns:1fr 1fr}
+  .srv-card{border-right:1px solid var(--rule)}
+  .srv-card:nth-child(even){border-right:none!important}
+  .srv-card:nth-child(3){border-right:1px solid var(--rule)!important}
+  .f-pair{grid-template-columns:1fr}
+  .form-box{padding:1.8rem}
+  .footer-grid{grid-template-columns:1fr}
+  .ft-bottom{flex-direction:column;gap:.4rem;text-align:center}
+  .sc-strip{grid-template-columns:1fr}
+  .sc-mosaic{grid-template-columns:1fr;grid-template-rows:auto}
+  .sc-p{height:240px}
+}
+@media(max-width:500px){
+  .hero-btns{flex-direction:column}
+  .btn-hero-s{justify-content:center}
+  .srv-strip{grid-template-columns:1fr}
+  .srv-card{border-right:none!important;border-bottom:1px solid var(--rule)}
+  .form-box{padding:1.4rem}
+  .services-hd{padding:0 1.5rem}
+  .techno-hd{padding:0 1.5rem}
+  .footer{padding:3rem 1.5rem 2rem}
+}
+</style>
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
-<nav class="navbar" id="nav">
-  <div class="nav-inner">
-    <a href="#accueil" class="nav-logo">
-      <div class="nav-logo-icon">
+<!-- ══════════ NAVBAR ══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-row">
+    <a href="#accueil" class="logo">
+      <div class="logo-icon">
         <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C11 4 7 8 7 12.5C7 17 9.5 21 12 24.5C13.5 26.5 14.5 28.5 16 28.5C17.5 28.5 18.5 26.5 20 24.5C22.5 21 25 17 25 12.5C25 8 21 4 16 4Z" fill="currentColor"/></svg>
       </div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-main">Centre Dentaire</span>
-        <span class="nav-logo-sub">Polo · Casablanca</span>
+      <div>
+        <span class="logo-name">Centre Dentaire Polo</span>
+        <span class="logo-city">Casablanca · Maroc</span>
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#accueil"     class="nav-link">Accueil</a></li>
-      <li><a href="#le-centre"   class="nav-link">Le Centre</a></li>
-      <li><a href="#services"    class="nav-link">Services</a></li>
-      <li><a href="#technologie" class="nav-link">Technologie</a></li>
-      <li><a href="#contact"     class="nav-link">Contact</a></li>
+      <li><a href="#accueil"     class="nav-a">Accueil</a></li>
+      <li><a href="#le-centre"   class="nav-a">Le Centre</a></li>
+      <li><a href="#services"    class="nav-a">Services</a></li>
+      <li><a href="#technologie" class="nav-a">Plateau Technique</a></li>
+      <li><a href="#contact"     class="nav-a">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn-nav">Prendre RDV</a>
-    <button class="hamburger" id="hbg" aria-label="Menu">
-      <span id="h1"/><span id="h2"/><span id="h3"/>
+    <a href="#contact" class="nav-rdv">Prendre RDV</a>
+    <button class="hbg" id="hbg" aria-label="Menu">
+      <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="mobile-menu" id="mmenu">
-    <a href="#accueil"     class="mobile-link" onclick="closeMenu()">Accueil</a>
-    <a href="#le-centre"   class="mobile-link" onclick="closeMenu()">Le Centre</a>
-    <a href="#services"    class="mobile-link" onclick="closeMenu()">Services</a>
-    <a href="#technologie" class="mobile-link" onclick="closeMenu()">Technologie</a>
-    <a href="#contact"     class="mobile-link" onclick="closeMenu()">Contact</a>
-    <a href="#contact"     class="btn-nav m-cta" onclick="closeMenu()">Prendre RDV</a>
+  <div class="mob" id="mob">
+    <a href="#accueil"     class="mob-a" onclick="closeMob()">Accueil</a>
+    <a href="#le-centre"   class="mob-a" onclick="closeMob()">Le Centre</a>
+    <a href="#services"    class="mob-a" onclick="closeMob()">Services</a>
+    <a href="#technologie" class="mob-a" onclick="closeMob()">Plateau Technique</a>
+    <a href="#contact"     class="mob-a" onclick="closeMob()">Contact</a>
+    <a href="#contact"     class="mob-rdv" onclick="closeMob()">Prendre Rendez-vous</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- ══════════ HERO ══════════ -->
 <section id="accueil" class="hero">
-  <div class="hero-bg">
-    <img src="images/reception.jpg" alt="Réception Centre Dentaire Polo" loading="eager">
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-badge reveal"><span class="hero-dot"></span> Casablanca · Quartier Polo</div>
-    <h1 class="hero-title reveal d1">L'excellence<br><em>dentaire</em> au<br>cœur de Polo.</h1>
-    <p class="hero-sub reveal d2">Un espace médical de pointe alliant confort, hygiène irréprochable et expertise clinique pour votre santé bucco-dentaire.</p>
-    <div class="hero-actions reveal d3">
-      <a href="#contact" class="btn-p">
-        Prendre rendez-vous
-        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-      </a>
-      <a href="#le-centre" class="btn-ghost">Découvrir le centre</a>
+  <div class="hero-bg"><img src="images/reception.jpg" alt="Centre Dentaire Polo — Réception" loading="eager"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-tint"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-body">
+    <div class="hero-left">
+      <div class="hero-kicker">
+        <span class="hero-kicker-dot"></span>
+        Casablanca · Quartier Polo
+      </div>
+      <h1 class="hero-h1">
+        L'art<br>
+        du soin,<br>
+        <em>l'excellence.</em>
+      </h1>
+      <p class="hero-p">Un espace médical d'exception alliant technologie de pointe, hygiène irréprochable et expertise clinique pour votre santé bucco-dentaire.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-hero-p">
+          Prendre rendez-vous
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="#le-centre" class="btn-hero-s">Découvrir le centre</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat">
+        <div class="hero-stat-n"><span id="hs1">15</span><span class="hero-stat-sup">+</span></div>
+        <div class="hero-stat-l">Années d'expérience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n"><span id="hs2">4</span></div>
+        <div class="hero-stat-l">Salles de soins</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n"><span id="hs3">98</span><span class="hero-stat-sup">%</span></div>
+        <div class="hero-stat-l">Patients satisfaits</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n">5</div>
+        <div class="hero-stat-l">Spécialités</div>
+      </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
+
+  <div class="hero-gold-bar"></div>
+
+  <div class="scroll-ind">
+    <div class="scroll-pipe"></div>
     <span>Défiler</span>
   </div>
-  <div class="hero-card reveal d4">
-    <div class="hero-card-icon">✓</div>
+</section>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Implantologie</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Chirurgie Orale</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Esthétique Dentaire</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Radiologie 3D Carestream</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Parodontologie</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Stérilisation Certifiée</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Consultation Générale</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> 4 Salles Équipées</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Implantologie</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Chirurgie Orale</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Esthétique Dentaire</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Radiologie 3D Carestream</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Parodontologie</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Stérilisation Certifiée</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> Consultation Générale</span>
+    <span class="ticker-item"><span class="ticker-gem">◆</span> 4 Salles Équipées</span>
+  </div>
+</div>
+
+<!-- ══════════ LE CENTRE ══════════ -->
+<section id="le-centre" class="about">
+  <div class="about-inner">
     <div>
-      <div class="hero-card-title">Centre accrédité</div>
-      <div class="hero-card-sub">Protocoles certifiés · Stérilisation totale</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── STATS ── -->
-<section class="stats" id="stats-sec">
-  <div class="stats-inner">
-    <div class="stat-item reveal">
-      <div class="stat-num"><span id="c1">0</span><span>+</span></div>
-      <div class="stat-lbl">Années d'expérience</div>
-    </div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal d1">
-      <div class="stat-num"><span id="c2">0</span></div>
-      <div class="stat-lbl">Salles de soins</div>
-    </div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal d2">
-      <div class="stat-num"><span id="c3">0</span><span>%</span></div>
-      <div class="stat-lbl">Patients satisfaits</div>
-    </div>
-    <div class="stat-div"></div>
-    <div class="stat-item reveal d3">
-      <div class="stat-num">5</div>
-      <div class="stat-lbl">Spécialités médicales</div>
-    </div>
-  </div>
-</section>
-
-<!-- ── LE CENTRE ── -->
-<section id="le-centre" class="centre">
-  <div class="container">
-    <div class="centre-grid">
-      <div>
-        <p class="eyebrow reveal">Notre identité</p>
-        <h2 class="sec-title reveal d1">Un cabinet pensé pour <em>votre confort</em></h2>
-        <p class="centre-desc reveal d2">Situé au quartier Polo à Casablanca, le Centre Dentaire Polo est un espace médical moderne entièrement dédié à votre santé bucco-dentaire. Nos salles de soins sont équipées des dernières technologies, et notre équipe qualifiée vous accueille dans un cadre chaleureux et serein.</p>
-        <ul class="features reveal d3">
-          <li class="feature"><span class="f-check">✓</span> Salles de chirurgie stérilisées et équipées</li>
-          <li class="feature"><span class="f-check">✓</span> Radiologie panoramique 3D sur site</li>
-          <li class="feature"><span class="f-check">✓</span> Protocoles d'hygiène certifiés</li>
-          <li class="feature"><span class="f-check">✓</span> Équipe pluridisciplinaire expérimentée</li>
-          <li class="feature"><span class="f-check">✓</span> Prise en charge personnalisée</li>
-        </ul>
-      </div>
-      <div>
-        <div class="g-main reveal">
-          <img src="images/hall.jpg" alt="Hall d'accueil" loading="lazy">
-          <div class="g-cap">Hall d'accueil</div>
+      <p class="eyebrow" data-r>Notre identité</p>
+      <h2 class="about-title" data-r data-d="1">Un cabinet pensé<br>pour <em>votre bien-être</em></h2>
+      <p class="about-body" data-r data-d="2">Situé au cœur du quartier Polo à Casablanca, notre centre allie architecture médicale contemporaine et expertise clinique pluridisciplinaire pour vous offrir une expérience de soins d'exception.</p>
+      <div class="feat-list" data-r data-d="3">
+        <div class="feat-row">
+          <span class="feat-num">01</span>
+          <div class="feat-text"><strong>Stérilisation totale</strong><span>Protocoles certifiés, autoclaves Euronda dernière génération pour une hygiène irréprochable.</span></div>
         </div>
-        <div class="g-side">
-          <div class="g-sm reveal d1">
-            <img src="images/sterilisation.jpg" alt="Stérilisation" loading="lazy">
-            <div class="g-cap">Stérilisation</div>
-          </div>
-          <div class="g-sm reveal d2">
-            <img src="images/couloir.jpg" alt="Couloir" loading="lazy">
-            <div class="g-cap">Couloir des salles</div>
-          </div>
+        <div class="feat-row">
+          <span class="feat-num">02</span>
+          <div class="feat-text"><strong>Radiologie 3D sur site</strong><span>Panoramique et cone-beam Carestream CS 8200 pour un diagnostic précis et immédiat.</span></div>
+        </div>
+        <div class="feat-row">
+          <span class="feat-num">03</span>
+          <div class="feat-text"><strong>Équipe pluridisciplinaire</strong><span>Implantologistes, chirurgiens et spécialistes en esthétique dentaire sous un même toit.</span></div>
+        </div>
+        <div class="feat-row">
+          <span class="feat-num">04</span>
+          <div class="feat-text"><strong>Suivi personnalisé</strong><span>Plan de traitement sur mesure et accompagnement attentif à chaque étape de vos soins.</span></div>
+        </div>
+      </div>
+    </div>
+    <div data-r data-d="2">
+      <div class="aph-main">
+        <img src="images/hall.jpg" alt="Hall d'accueil" loading="lazy">
+        <div class="aph-cap">Hall d'accueil</div>
+      </div>
+      <div class="aph-row">
+        <div class="aph-sm">
+          <img src="images/sterilisation.jpg" alt="Unité de stérilisation" loading="lazy">
+          <div class="aph-sm-cap">Stérilisation</div>
+        </div>
+        <div class="aph-sm">
+          <img src="images/couloir.jpg" alt="Couloir des salles" loading="lazy">
+          <div class="aph-sm-cap">Couloir des salles</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
+<!-- ══════════ SERVICES ══════════ -->
 <section id="services" class="services">
-  <div class="container">
-    <div class="sec-head">
-      <p class="eyebrow reveal">Ce que nous traitons</p>
-      <h2 class="sec-title reveal d1">Nos domaines<br><em>d'expertise</em></h2>
+  <div class="services-hd">
+    <div data-r>
+      <p class="eyebrow">Nos expertises</p>
+      <h2 class="srv-title">Ce que nous<br><em>traitons pour vous</em></h2>
     </div>
-    <div class="srv-grid">
-      <div class="srv-card reveal d1">
-        <div class="srv-icon">🦷</div>
-        <div class="srv-tag">Salle 1 dédiée</div>
-        <h3 class="srv-title">Implantologie</h3>
-        <p class="srv-desc">Restaurez la fonction et l'esthétique grâce à nos implants de haute précision posés dans notre salle dédiée à la chirurgie implantaire.</p>
-      </div>
-      <div class="srv-card reveal d2">
-        <div class="srv-icon">✨</div>
-        <div class="srv-tag">Sur mesure</div>
-        <h3 class="srv-title">Esthétique Dentaire</h3>
-        <p class="srv-desc">Facettes en céramique, blanchiment professionnel et conception de sourire pour un résultat naturel et lumineux.</p>
-      </div>
-      <div class="srv-card reveal d3">
-        <div class="srv-icon">🔬</div>
-        <div class="srv-tag">Bloc stérile</div>
-        <h3 class="srv-title">Chirurgie Orale</h3>
-        <p class="srv-desc">Extractions complexes, chirurgies parodontales et interventions réalisées dans un bloc chirurgical stérile.</p>
-      </div>
-      <div class="srv-card reveal d1">
-        <div class="srv-icon">📸</div>
-        <div class="srv-tag">Carestream</div>
-        <h3 class="srv-title">Radiologie 3D</h3>
-        <p class="srv-desc">Panoramique et cone-beam réalisés sur place avec notre appareil Carestream pour un diagnostic précis et immédiat.</p>
-      </div>
-      <div class="srv-card reveal d2">
-        <div class="srv-icon">🛡️</div>
-        <div class="srv-tag">Prévention</div>
-        <h3 class="srv-title">Parodontologie</h3>
-        <p class="srv-desc">Traitement des maladies des gencives, détartrages et maintenances parodontales régulières.</p>
-      </div>
-      <div class="srv-card reveal d3">
-        <div class="srv-icon">🩺</div>
-        <div class="srv-tag">Bilan complet</div>
-        <h3 class="srv-title">Consultation Générale</h3>
-        <p class="srv-desc">Bilan bucco-dentaire complet, détartrage professionnel et plan de traitement personnalisé adapté à chaque patient.</p>
-      </div>
+    <p class="srv-sub" data-r data-d="1">Cinq domaines d'excellence médicale réunis dans un espace conçu pour votre confort et votre sécurité.</p>
+  </div>
+  <div class="srv-strip" data-r data-d="2">
+    <div class="srv-card">
+      <div class="srv-card-n">01</div>
+      <span class="srv-icon">🦷</span>
+      <div class="srv-name">Implantologie</div>
+      <p class="srv-desc">Implants de haute précision posés dans notre bloc dédié. Résultat naturel, fonction pleinement restaurée.</p>
+      <span class="srv-badge">Salle 1 dédiée</span>
+    </div>
+    <div class="srv-card">
+      <div class="srv-card-n">02</div>
+      <span class="srv-icon">✨</span>
+      <div class="srv-name">Esthétique</div>
+      <p class="srv-desc">Facettes céramique, blanchiment professionnel et design de sourire sur mesure.</p>
+      <span class="srv-badge">Sur mesure</span>
+    </div>
+    <div class="srv-card">
+      <div class="srv-card-n">03</div>
+      <span class="srv-icon">⚕️</span>
+      <div class="srv-name">Chirurgie Orale</div>
+      <p class="srv-desc">Extractions et chirurgies complexes réalisées dans un bloc chirurgical entièrement stérile.</p>
+      <span class="srv-badge">Bloc stérile</span>
+    </div>
+    <div class="srv-card">
+      <div class="srv-card-n">04</div>
+      <span class="srv-icon">📡</span>
+      <div class="srv-name">Radiologie 3D</div>
+      <p class="srv-desc">Panoramique et cone-beam Carestream CS 8200 sur site — diagnostic précis et immédiat.</p>
+      <span class="srv-badge">Carestream</span>
+    </div>
+    <div class="srv-card">
+      <div class="srv-card-n">05</div>
+      <span class="srv-icon">🛡️</span>
+      <div class="srv-name">Parodontologie</div>
+      <p class="srv-desc">Traitement des gencives, détartrages et maintenances préventives régulières.</p>
+      <span class="srv-badge">Prévention</span>
     </div>
   </div>
 </section>
 
-<!-- ── PHOTO SHOWCASE ── -->
+<!-- ══════════ SHOWCASE ══════════ -->
 <section class="showcase">
-  <div class="showcase-header reveal">
-    <p class="eyebrow" style="text-align:center">Nos installations</p>
-    <h2 class="sec-title" style="text-align:center;color:#fff">Un environnement <em style="color:var(--g4)">médical d'exception</em></h2>
+  <div class="showcase-intro">
+    <div data-r>
+      <p class="eyebrow inv">Nos installations</p>
+      <h2 class="showcase-t" data-r data-d="1">Un environnement<br><em>médical d'exception</em></h2>
+    </div>
+    <p class="showcase-desc" data-r data-d="2">Chaque espace conçu pour allier confort du patient, précision clinique et protocoles d'hygiène stricts.</p>
   </div>
-  <div class="showcase-grid">
-    <div class="sc-large reveal">
+
+  <div class="sc-mosaic">
+    <div class="sc-p sc-tall" data-r>
       <img src="images/reception.jpg" alt="Réception" loading="lazy">
-      <div class="sc-ov"></div>
-      <div class="sc-label">
+      <div class="sc-p-ov"></div>
+      <div class="sc-p-info">
         <span class="sc-tag">Accueil</span>
-        <div class="sc-title">Réception</div>
-        <div class="sc-sub">Un espace chaleureux pour vous accueillir</div>
+        <div class="sc-title lg">Réception</div>
+        <div class="sc-sub">Espace chaleureux et moderne</div>
       </div>
     </div>
-    <div class="sc-stack">
-      <div class="sc-small reveal d1">
-        <img src="images/salle4.jpg" alt="Salle de soins" loading="lazy">
-        <div class="sc-ov"></div>
-        <div class="sc-label">
-          <span class="sc-tag">Équipement</span>
-          <div class="sc-title">Salle de Soins</div>
-        </div>
-      </div>
-      <div class="sc-small reveal d2">
-        <img src="images/equipe.jpg" alt="Équipe médicale" loading="lazy">
-        <div class="sc-ov"></div>
-        <div class="sc-label">
-          <span class="sc-tag">Équipe</span>
-          <div class="sc-title">Professionnels Qualifiés</div>
-        </div>
-      </div>
-    </div>
-    <div class="sc-medium reveal d1">
+    <div class="sc-p" data-r data-d="1">
       <img src="images/salle2.jpg" alt="Bloc chirurgical" loading="lazy">
-      <div class="sc-ov"></div>
-      <div class="sc-label">
+      <div class="sc-p-ov"></div>
+      <div class="sc-p-info">
         <span class="sc-tag">Chirurgie</span>
         <div class="sc-title">Bloc Opératoire</div>
-        <div class="sc-sub">Équipé pour l'implantologie et les chirurgies complexes</div>
       </div>
     </div>
-    <div class="sc-medium reveal d2">
+    <div class="sc-p" data-r data-d="2">
+      <img src="images/salle3.jpg" alt="Consultation" loading="lazy">
+      <div class="sc-p-ov"></div>
+      <div class="sc-p-info">
+        <span class="sc-tag">Soins</span>
+        <div class="sc-title">Salle de Consultation</div>
+      </div>
+    </div>
+    <div class="sc-p" data-r data-d="3">
+      <img src="images/equipe.jpg" alt="Équipe médicale" loading="lazy">
+      <div class="sc-p-ov"></div>
+      <div class="sc-p-info">
+        <span class="sc-tag">Équipe</span>
+        <div class="sc-title">Professionnels qualifiés</div>
+      </div>
+    </div>
+    <div class="sc-p" data-r data-d="4">
+      <img src="images/salle4.jpg" alt="Salle esthétique" loading="lazy">
+      <div class="sc-p-ov"></div>
+      <div class="sc-p-info">
+        <span class="sc-tag">Esthétique</span>
+        <div class="sc-title">Salle Esthétique</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-strip">
+    <div class="sc-strip-p" data-r>
       <img src="images/sterilisation.jpg" alt="Stérilisation" loading="lazy">
-      <div class="sc-ov"></div>
-      <div class="sc-label">
+      <div class="sc-strip-ov"></div>
+      <div class="sc-strip-info">
         <span class="sc-tag">Hygiène</span>
-        <div class="sc-title">Unité de Stérilisation</div>
-        <div class="sc-sub">Protocoles certifiés, autoclaves Euronda</div>
+        <div class="sc-strip-name">Unité de Stérilisation</div>
+      </div>
+    </div>
+    <div class="sc-strip-p" data-r data-d="1">
+      <img src="images/radio.jpg" alt="Radiologie" loading="lazy">
+      <div class="sc-strip-ov"></div>
+      <div class="sc-strip-info">
+        <span class="sc-tag">Diagnostic</span>
+        <div class="sc-strip-name">Carestream CS 8200 3D</div>
+      </div>
+    </div>
+    <div class="sc-strip-p" data-r data-d="2">
+      <img src="images/salle1.jpg" alt="Salle implantologie" loading="lazy">
+      <div class="sc-strip-ov"></div>
+      <div class="sc-strip-info">
+        <span class="sc-tag">Implantologie</span>
+        <div class="sc-strip-name">Salle Chirurgicale 1</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── TECHNOLOGIE ── -->
+<!-- ══════════ PLATEAU TECHNIQUE ══════════ -->
 <section id="technologie" class="techno">
-  <div class="container">
-    <div class="sec-head">
-      <p class="eyebrow reveal">Notre plateau technique</p>
-      <h2 class="sec-title reveal d1">4 salles de soins<br><em>entièrement équipées</em></h2>
-      <p class="sec-sub reveal d2">Chaque salle est conçue pour une spécialité précise, avec un équipement médical dernière génération et des protocoles d'hygiène stricts.</p>
+  <div class="techno-hd">
+    <div data-r>
+      <p class="eyebrow">Plateau technique</p>
+      <h2 class="techno-title">4 salles de soins<br><em>entièrement équipées</em></h2>
     </div>
-    <div class="rooms">
-      <div class="room feat reveal">
-        <img src="images/salle1.jpg" alt="Salle 1 Implantologie" loading="lazy">
-        <div class="room-ov"></div>
-        <div class="room-info">
-          <div class="room-lbl">Salle 1</div>
-          <div class="room-sub">Implantologie & Chirurgie</div>
-        </div>
-      </div>
-      <div class="room reveal d1">
-        <img src="images/salle2.jpg" alt="Salle 2" loading="lazy">
-        <div class="room-ov"></div>
-        <div class="room-info">
-          <div class="room-lbl">Salle 2</div>
-          <div class="room-sub">Soins & Traitements</div>
-        </div>
-      </div>
-      <div class="room reveal d2">
-        <img src="images/salle3.jpg" alt="Salle 3" loading="lazy">
-        <div class="room-ov"></div>
-        <div class="room-info">
-          <div class="room-lbl">Salle 3</div>
-          <div class="room-sub">Consultation & Soins</div>
-        </div>
-      </div>
-      <div class="room reveal d3">
-        <img src="images/salle4.jpg" alt="Salle 4" loading="lazy">
-        <div class="room-ov"></div>
-        <div class="room-info">
-          <div class="room-lbl">Salle 4</div>
-          <div class="room-sub">Esthétique & Blanchiment</div>
-        </div>
+    <p class="techno-note" data-r data-d="1">Chaque salle est dédiée à une spécialité, dotée d'équipements médicaux de dernière génération et de protocoles d'hygiène stricts.</p>
+  </div>
+  <div class="rooms-wrap">
+    <div class="room-c wide" data-r>
+      <img src="images/salle1.jpg" alt="Salle 1 — Implantologie" loading="lazy">
+      <div class="room-c-ov"></div>
+      <div class="room-num-bg">01</div>
+      <div class="room-info">
+        <div class="room-title">Salle 1</div>
+        <div class="room-spec">Implantologie & Chirurgie</div>
       </div>
     </div>
-    <div class="equip-strip">
-      <div class="equip reveal d1">
-        <img src="images/radio.jpg" alt="Carestream">
-        <div>
-          <div class="equip-name">Carestream CS 8200 3D</div>
-          <div class="equip-desc">Panoramique & Cone-beam</div>
-        </div>
+    <div class="room-c" data-r data-d="1">
+      <img src="images/salle2.jpg" alt="Salle 2" loading="lazy">
+      <div class="room-c-ov"></div>
+      <div class="room-num-bg">02</div>
+      <div class="room-info">
+        <div class="room-title">Salle 2</div>
+        <div class="room-spec">Soins & Traitements</div>
       </div>
-      <div class="equip reveal d2">
-        <img src="images/sterilisation.jpg" alt="Stérilisation">
-        <div>
-          <div class="equip-name">Unité de Stérilisation</div>
-          <div class="equip-desc">Autoclaves Euronda certifiés</div>
-        </div>
+    </div>
+    <div class="room-c" data-r data-d="2">
+      <img src="images/salle3.jpg" alt="Salle 3" loading="lazy">
+      <div class="room-c-ov"></div>
+      <div class="room-num-bg">03</div>
+      <div class="room-info">
+        <div class="room-title">Salle 3</div>
+        <div class="room-spec">Consultation & Soins</div>
       </div>
-      <div class="equip reveal d3">
-        <img src="images/equipe.jpg" alt="Équipe">
-        <div>
-          <div class="equip-name">Équipe Médicale</div>
-          <div class="equip-desc">Protocoles stricts & formation continue</div>
-        </div>
+    </div>
+    <div class="room-c" data-r data-d="1">
+      <img src="images/salle4.jpg" alt="Salle 4" loading="lazy">
+      <div class="room-c-ov"></div>
+      <div class="room-num-bg">04</div>
+      <div class="room-info">
+        <div class="room-title">Salle 4</div>
+        <div class="room-spec">Esthétique & Blanchiment</div>
       </div>
+    </div>
+  </div>
+  <div class="equip-strip">
+    <div class="equip-c" data-r data-d="1">
+      <div class="equip-thumb"><img src="images/radio.jpg" alt="Carestream" loading="lazy"></div>
+      <div><div class="equip-name">Carestream CS 8200 3D</div><div class="equip-desc">Panoramique & Cone-beam sur site</div></div>
+    </div>
+    <div class="equip-c" data-r data-d="2">
+      <div class="equip-thumb"><img src="images/sterilisation.jpg" alt="Stérilisation" loading="lazy"></div>
+      <div><div class="equip-name">Unité de Stérilisation</div><div class="equip-desc">Autoclaves Euronda certifiés</div></div>
+    </div>
+    <div class="equip-c" data-r data-d="3">
+      <div class="equip-thumb"><img src="images/equipe.jpg" alt="Équipe" loading="lazy"></div>
+      <div><div class="equip-name">Équipe Médicale</div><div class="equip-desc">Formation continue & protocoles stricts</div></div>
     </div>
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
+<!-- ══════════ TESTIMONIALS ══════════ -->
 <section class="testi">
-  <div class="container">
-    <p class="eyebrow reveal" style="text-align:center">Avis patients</p>
-    <h2 class="sec-title reveal d1" style="text-align:center">Ce que disent<br><em>nos patients</em></h2>
-    <div class="t-carousel reveal d2" id="carousel">
-      <div class="t-item on">
-        <div class="t-q">"</div>
-        <p class="t-text">Un accueil chaleureux et un suivi impeccable. Les salles sont ultra-modernes et le Dr. est à l'écoute. Je recommande sans hésiter.</p>
-        <div class="t-author"><div class="t-av">F</div><div><div class="t-name">Fatima Z.</div><div class="t-role">Patiente depuis 3 ans</div></div></div>
+  <div class="testi-bg-q">"</div>
+  <div class="testi-inner">
+    <p class="eyebrow inv" style="justify-content:center" data-r>Témoignages patients</p>
+    <h2 class="testi-title" data-r data-d="1">Ce que disent<br><em>nos patients</em></h2>
+    <div class="t-stage" data-r data-d="2">
+      <div class="t-card on">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">Un accueil chaleureux et un suivi impeccable. Les salles sont ultra-modernes et le Dr. est vraiment à l'écoute. Je recommande sans la moindre hésitation.</p>
+        <div class="t-who"><div class="t-avatar">F</div><div><div class="t-name">Fatima Z.</div><div class="t-role">Patiente depuis 3 ans</div></div></div>
       </div>
-      <div class="t-item">
-        <div class="t-q">"</div>
-        <p class="t-text">J'ai eu mes implants posés ici et le résultat est parfait. L'équipe est professionnelle et rassurante du début à la fin.</p>
-        <div class="t-author"><div class="t-av">K</div><div><div class="t-name">Karim B.</div><div class="t-role">Implantologie</div></div></div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">J'ai eu mes implants posés ici et le résultat est parfait. L'équipe est professionnelle et rassurante, du premier rendez-vous jusqu'à la fin du traitement.</p>
+        <div class="t-who"><div class="t-avatar">K</div><div><div class="t-name">Karim B.</div><div class="t-role">Implantologie · 2024</div></div></div>
       </div>
-      <div class="t-item">
-        <div class="t-q">"</div>
-        <p class="t-text">L'espace est propre, moderne et bien organisé. On se sent entre de bonnes mains. Le meilleur cabinet dentaire que j'ai connu.</p>
-        <div class="t-author"><div class="t-av">N</div><div><div class="t-name">Nadia M.</div><div class="t-role">Esthétique dentaire</div></div></div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">L'espace est propre, moderne et parfaitement organisé. On se sent vraiment entre de bonnes mains. Le meilleur cabinet dentaire que j'aie connu à Casablanca.</p>
+        <div class="t-who"><div class="t-avatar">N</div><div><div class="t-name">Nadia M.</div><div class="t-role">Esthétique dentaire</div></div></div>
       </div>
     </div>
     <div class="t-dots">
-      <button class="dot on" onclick="goSlide(0)"></button>
-      <button class="dot"    onclick="goSlide(1)"></button>
-      <button class="dot"    onclick="goSlide(2)"></button>
+      <button class="t-dot on" onclick="goT(0)"></button>
+      <button class="t-dot"    onclick="goT(1)"></button>
+      <button class="t-dot"    onclick="goT(2)"></button>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- ══════════ CONTACT ══════════ -->
 <section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="reveal">
-        <p class="eyebrow" style="color:var(--g4)">Nous contacter</p>
-        <h2 class="sec-title" style="color:#fff">Prenez<br><em style="color:var(--g4)">rendez-vous</em></h2>
-        <p style="color:rgba(255,255,255,.68);margin-bottom:1.8rem;line-height:1.75">Notre équipe vous accueille du lundi au samedi. N'hésitez pas à nous appeler ou à utiliser le formulaire ci-contre.</p>
-        <div class="ci-details">
-          <div class="ci-row">
-            <div class="ci-icon">📍</div>
-            <div><div class="ci-lbl">Adresse</div><div class="ci-val">Quartier Polo, Casablanca, Maroc</div></div>
-          </div>
-          <div class="ci-row">
-            <div class="ci-icon">📞</div>
-            <div><div class="ci-lbl">Téléphone</div><div class="ci-val">+212 5XX XX XX XX</div></div>
-          </div>
-          <div class="ci-row">
-            <div class="ci-icon">🕐</div>
-            <div><div class="ci-lbl">Horaires</div><div class="ci-val">Lun–Ven · 09h–19h &nbsp;|&nbsp; Sam · 09h–13h</div></div>
-          </div>
+  <div class="contact-wrap">
+    <div data-r>
+      <p class="eyebrow contact-eyebrow">Nous contacter</p>
+      <h2 class="contact-title">Prenez<br><em>rendez-vous</em></h2>
+      <p class="contact-p">Notre équipe vous accueille du lundi au vendredi. Appelez-nous ou remplissez le formulaire — réponse sous 24h.</p>
+      <div class="ci-rows">
+        <div class="ci-row">
+          <div class="ci-ico-box">📍</div>
+          <div><div class="ci-lbl">Adresse</div><div class="ci-val">1er étage, 236 rue Pasquier,<br>Résid. Abdelmoumen, Casablanca</div></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-ico-box">📞</div>
+          <div><div class="ci-lbl">Téléphone</div><div class="ci-val">+212 522 23 78 75</div></div>
+        </div>
+        <div class="ci-row">
+          <div class="ci-ico-box">🕐</div>
+          <div><div class="ci-lbl">Horaires</div><div class="ci-val">Lun – Ven &nbsp;·&nbsp; 09h – 19h<br>Samedi &nbsp;·&nbsp; 09h – 13h</div></div>
         </div>
       </div>
-      <div class="form-wrap reveal d2">
-        <div id="fsuccess" class="fsuccess" style="display:none">
-          <div class="fsuccess-icon">✓</div>
+    </div>
+    <div data-r data-d="2">
+      <div class="form-box">
+        <div id="form-ok" class="form-ok" style="display:none">
+          <div class="form-ok-ico">✓</div>
           <h3>Message envoyé !</h3>
           <p>Nous vous recontacterons dans les plus brefs délais.</p>
         </div>
-        <form id="cform" class="cform" onsubmit="submitForm(event)">
-          <div class="f-row">
-            <div class="fg"><label>Nom complet</label><input type="text" placeholder="Votre nom" required></div>
-            <div class="fg"><label>Téléphone</label><input type="tel" placeholder="+212 6XX XX XX XX" required></div>
-          </div>
-          <div class="fg">
-            <label>Service souhaité</label>
-            <select required>
-              <option value="">Sélectionner un service…</option>
-              <option>Implantologie</option>
-              <option>Chirurgie orale</option>
-              <option>Esthétique dentaire</option>
-              <option>Radiologie 3D</option>
-              <option>Parodontologie</option>
-              <option>Pédodontie</option>
-              <option>Consultation générale</option>
-            </select>
-          </div>
-          <div class="fg"><label>Message (optionnel)</label><textarea placeholder="Décrivez votre demande…" rows="4"></textarea></div>
-          <button type="submit" class="btn-p full">
-            Envoyer ma demande
-            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
-          </button>
-        </form>
+        <div id="form-wrap">
+          <div class="form-box-title">Demande de rendez-vous</div>
+          <div class="form-box-sub">Remplissez ce formulaire, nous vous répondons sous 24h.</div>
+          <form class="form-fields" id="cform" onsubmit="doForm(event)">
+            <div class="f-pair">
+              <div class="fg"><label>Nom complet</label><input type="text" placeholder="Votre nom" required></div>
+              <div class="fg"><label>Téléphone</label><input type="tel" placeholder="+212 6XX XX XX XX" required></div>
+            </div>
+            <div class="fg">
+              <label>Service souhaité</label>
+              <select required>
+                <option value="">Sélectionner…</option>
+                <option>Implantologie</option>
+                <option>Chirurgie orale</option>
+                <option>Esthétique dentaire</option>
+                <option>Radiologie 3D</option>
+                <option>Parodontologie</option>
+                <option>Consultation générale</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message (optionnel)</label><textarea placeholder="Décrivez votre demande…" rows="3"></textarea></div>
+            <button type="submit" class="btn-submit">
+              Envoyer ma demande
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
-  <div class="footer-logo">
-    <svg viewBox="0 0 24 24" fill="currentColor" class="footer-tooth"><path d="M12 2C8.5 2 5.5 5 5.5 8.5C5.5 12 7.5 15 9.5 18C10.5 19.5 11 21 12 21C13 21 13.5 19.5 14.5 18C16.5 15 18.5 12 18.5 8.5C18.5 5 15.5 2 12 2Z"/></svg>
-    Centre Dentaire Polo
+  <div class="footer-grid">
+    <div>
+      <div class="ft-brand-row">
+        <div class="ft-icon"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4C11 4 7 8 7 12.5C7 17 9.5 21 12 24.5C13.5 26.5 14.5 28.5 16 28.5C17.5 28.5 18.5 26.5 20 24.5C22.5 21 25 17 25 12.5C25 8 21 4 16 4Z" fill="currentColor"/></svg></div>
+        <span class="ft-name">Centre Dentaire Polo</span>
+      </div>
+      <p class="ft-tag">L'excellence clinique au cœur du quartier Polo, Casablanca, Maroc.</p>
+    </div>
+    <div>
+      <div class="ft-col-h">Navigation</div>
+      <div class="ft-links">
+        <a href="#accueil"     class="ft-link">Accueil</a>
+        <a href="#le-centre"   class="ft-link">Le Centre</a>
+        <a href="#services"    class="ft-link">Services</a>
+        <a href="#technologie" class="ft-link">Plateau Technique</a>
+        <a href="#contact"     class="ft-link">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-h">Contact</div>
+      <div class="ft-ct">
+        1er étage, 236 rue Pasquier<br>
+        Résid. Abdelmoumen, Casablanca<br><br>
+        <a href="tel:+212522237875">+212 522 23 78 75</a><br><br>
+        Lun–Ven · 09h–19h &nbsp;|&nbsp; Sam · 09h–13h
+      </div>
+    </div>
   </div>
-  <p class="f-copy">© <span id="yr"></span> Centre Dentaire Polo · Casablanca, Maroc</p>
-  <p class="f-tagline">L'excellence clinique au cœur de Polo.</p>
+  <div class="ft-bottom">
+    <span class="ft-copy">© <span id="yr"></span> Centre Dentaire Polo · Casablanca, Maroc</span>
+    <span class="ft-motto">Soins d'excellence · Technologie de pointe</span>
+  </div>
 </footer>
 
 <script>
-  /* ── Year ── */
-  document.getElementById('yr').textContent = new Date().getFullYear();
+/* Year */
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  /* ── Navbar scroll ── */
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('scrolled', scrollY > 40);
-  });
+/* Navbar */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('s', scrollY > 55);
+window.addEventListener('scroll', onScroll, {passive:true});
 
-  /* ── Hamburger ── */
-  let menuOpen = false;
-  document.getElementById('hbg').addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    document.getElementById('mmenu').classList.toggle('open', menuOpen);
-    document.getElementById('h1').className = menuOpen ? 'x1' : '';
-    document.getElementById('h2').className = menuOpen ? 'x2' : '';
-    document.getElementById('h3').className = menuOpen ? 'x3' : '';
-  });
-  function closeMenu() {
-    menuOpen = false;
-    document.getElementById('mmenu').classList.remove('open');
-    ['h1','h2','h3'].forEach(id => document.getElementById(id).className = '');
-  }
+/* Hamburger */
+const hbg = document.getElementById('hbg');
+const mob = document.getElementById('mob');
+let mOpen = false;
+hbg.addEventListener('click', () => {
+  mOpen = !mOpen;
+  mob.classList.toggle('open', mOpen);
+  hbg.classList.toggle('x', mOpen);
+});
+function closeMob() {
+  mOpen = false; mob.classList.remove('open'); hbg.classList.remove('x');
+}
 
-  /* ── Scroll reveal ── */
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+/* Scroll reveal */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('[data-r]').forEach(el => ro.observe(el));
 
-  /* ── Counter animation ── */
-  function animateCounter(el, target, duration) {
-    let start = null;
-    const step = ts => {
-      if (!start) start = ts;
-      const p = Math.min((ts - start) / duration, 1);
-      el.textContent = Math.floor(p * target);
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }
-  const statsIo = new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) {
-      animateCounter(document.getElementById('c1'), 15, 1600);
-      animateCounter(document.getElementById('c2'), 4,  1200);
-      animateCounter(document.getElementById('c3'), 98, 2000);
-      statsIo.disconnect();
-    }
-  }, { threshold: 0.5 });
-  statsIo.observe(document.getElementById('stats-sec'));
+/* Hero stats animate on load */
+function animNum(el, to, dur) {
+  let s = null;
+  const go = ts => {
+    if (!s) s = ts;
+    const p = Math.min((ts - s) / dur, 1);
+    el.textContent = Math.floor(p * to);
+    if (p < 1) requestAnimationFrame(go);
+  };
+  requestAnimationFrame(go);
+}
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    animNum(document.getElementById('hs1'), 15, 1600);
+    animNum(document.getElementById('hs2'), 4,  1000);
+    animNum(document.getElementById('hs3'), 98, 2000);
+  }, 800);
+});
 
-  /* ── Testimonial carousel ── */
-  let slide = 0;
-  const items = document.querySelectorAll('.t-item');
-  const dots  = document.querySelectorAll('.dot');
-  function goSlide(n) {
-    items[slide].classList.remove('on');
-    dots[slide].classList.remove('on');
-    slide = n;
-    items[slide].classList.add('on');
-    dots[slide].classList.add('on');
-  }
-  setInterval(() => goSlide((slide + 1) % items.length), 4500);
+/* Testimonials */
+let cur = 0;
+const cards = document.querySelectorAll('.t-card');
+const dots  = document.querySelectorAll('.t-dot');
+function goT(n) {
+  cards[cur].classList.remove('on'); dots[cur].classList.remove('on');
+  cur = n;
+  cards[cur].classList.add('on'); dots[cur].classList.add('on');
+}
+setInterval(() => goT((cur + 1) % cards.length), 5500);
 
-  /* ── Contact form ── */
-  function submitForm(e) {
-    e.preventDefault();
-    document.getElementById('cform').style.display = 'none';
-    document.getElementById('fsuccess').style.display = 'block';
-    setTimeout(() => {
-      document.getElementById('fsuccess').style.display = 'none';
-      document.getElementById('cform').style.display = 'flex';
-      document.getElementById('cform').reset();
-    }, 4000);
-  }
+/* Form */
+function doForm(e) {
+  e.preventDefault();
+  document.getElementById('form-wrap').style.display = 'none';
+  document.getElementById('form-ok').style.display = 'block';
+  setTimeout(() => {
+    document.getElementById('form-ok').style.display = 'none';
+    document.getElementById('form-wrap').style.display = 'block';
+    e.target.reset();
+  }, 4500);
+}
 </script>
 </body>
 </html>
