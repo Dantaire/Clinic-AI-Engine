@@ -195,6 +195,40 @@
     .srv-title { font-family:var(--fd); font-size:1.2rem; font-weight:700; color:var(--s9); margin-bottom:.55rem; }
     .srv-desc { font-size:.88rem; color:var(--s5); line-height:1.7; }
 
+    /* ── PHOTO SHOWCASE ── */
+    .showcase { background: var(--s9); padding: 6rem 0; }
+    .showcase-header { margin-bottom: 3rem; }
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 0.8fr;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .sc-large { grid-row: span 2; border-radius: var(--r-lg); overflow: hidden; position: relative; height: 560px; }
+    .sc-stack { display: flex; flex-direction: column; gap: 1rem; }
+    .sc-small { border-radius: var(--r-lg); overflow: hidden; position: relative; flex: 1; min-height: 0; height: 268px; }
+    .sc-medium { border-radius: var(--r-lg); overflow: hidden; position: relative; height: 180px; }
+    .sc-large img, .sc-small img, .sc-medium img { width:100%; height:100%; object-fit:cover; transition: transform .7s ease; }
+    .sc-large:hover img, .sc-small:hover img, .sc-medium:hover img { transform: scale(1.05); }
+    .sc-ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,15,8,.85) 0%, rgba(5,15,8,.2) 50%, transparent 100%); }
+    .sc-label { position: absolute; bottom: 1.2rem; left: 1.3rem; color: #fff; }
+    .sc-tag { font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; background: var(--g5); color: #fff; padding: .18rem .55rem; border-radius: 999px; display: inline-block; margin-bottom: .4rem; }
+    .sc-title { font-family: var(--fd); font-size: 1.25rem; font-weight: 700; line-height: 1.2; }
+    .sc-large .sc-title { font-size: 1.75rem; }
+    .sc-sub { font-size: .78rem; color: rgba(255,255,255,.72); margin-top: .25rem; max-width: 260px; line-height: 1.5; }
+    .sc-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; grid-column: span 2; }
+
+    @media(max-width:768px) {
+      .showcase-grid { grid-template-columns: 1fr; }
+      .sc-large { height: 300px; grid-row: span 1; }
+      .sc-stack { flex-direction: row; }
+      .sc-small { height: 180px; }
+      .sc-bottom { grid-template-columns: 1fr; grid-column: span 1; }
+    }
+
     /* ── TECHNOLOGIE ── */
     .techno { padding:6rem 0; }
     .rooms { display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem; margin-bottom:1.2rem; }
@@ -459,10 +493,65 @@
         <p class="srv-desc">Traitement des maladies des gencives, détartrages et maintenances parodontales régulières.</p>
       </div>
       <div class="srv-card reveal d3">
-        <div class="srv-icon">👶</div>
-        <div class="srv-tag">Dès 3 ans</div>
-        <h3 class="srv-title">Pédodontie</h3>
-        <p class="srv-desc">Soins adaptés aux enfants dans un environnement doux et rassurant pour développer de bonnes habitudes dès le plus jeune âge.</p>
+        <div class="srv-icon">🩺</div>
+        <div class="srv-tag">Bilan complet</div>
+        <h3 class="srv-title">Consultation Générale</h3>
+        <p class="srv-desc">Bilan bucco-dentaire complet, détartrage professionnel et plan de traitement personnalisé adapté à chaque patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PHOTO SHOWCASE ── -->
+<section class="showcase">
+  <div class="showcase-header reveal">
+    <p class="eyebrow" style="text-align:center">Nos installations</p>
+    <h2 class="sec-title" style="text-align:center;color:#fff">Un environnement <em style="color:var(--g4)">médical d'exception</em></h2>
+  </div>
+  <div class="showcase-grid">
+    <div class="sc-large reveal">
+      <img src="images/reception.jpg" alt="Réception" loading="lazy">
+      <div class="sc-ov"></div>
+      <div class="sc-label">
+        <span class="sc-tag">Accueil</span>
+        <div class="sc-title">Réception</div>
+        <div class="sc-sub">Un espace chaleureux pour vous accueillir</div>
+      </div>
+    </div>
+    <div class="sc-stack">
+      <div class="sc-small reveal d1">
+        <img src="images/salle4.jpg" alt="Salle de soins" loading="lazy">
+        <div class="sc-ov"></div>
+        <div class="sc-label">
+          <span class="sc-tag">Équipement</span>
+          <div class="sc-title">Salle de Soins</div>
+        </div>
+      </div>
+      <div class="sc-small reveal d2">
+        <img src="images/equipe.jpg" alt="Équipe médicale" loading="lazy">
+        <div class="sc-ov"></div>
+        <div class="sc-label">
+          <span class="sc-tag">Équipe</span>
+          <div class="sc-title">Professionnels Qualifiés</div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-medium reveal d1">
+      <img src="images/salle2.jpg" alt="Bloc chirurgical" loading="lazy">
+      <div class="sc-ov"></div>
+      <div class="sc-label">
+        <span class="sc-tag">Chirurgie</span>
+        <div class="sc-title">Bloc Opératoire</div>
+        <div class="sc-sub">Équipé pour l'implantologie et les chirurgies complexes</div>
+      </div>
+    </div>
+    <div class="sc-medium reveal d2">
+      <img src="images/sterilisation.jpg" alt="Stérilisation" loading="lazy">
+      <div class="sc-ov"></div>
+      <div class="sc-label">
+        <span class="sc-tag">Hygiène</span>
+        <div class="sc-title">Unité de Stérilisation</div>
+        <div class="sc-sub">Protocoles certifiés, autoclaves Euronda</div>
       </div>
     </div>
   </div>
@@ -499,6 +588,14 @@
         <div class="room-info">
           <div class="room-lbl">Salle 3</div>
           <div class="room-sub">Consultation & Soins</div>
+        </div>
+      </div>
+      <div class="room reveal d3">
+        <img src="images/salle4.jpg" alt="Salle 4" loading="lazy">
+        <div class="room-ov"></div>
+        <div class="room-info">
+          <div class="room-lbl">Salle 4</div>
+          <div class="room-sub">Esthétique & Blanchiment</div>
         </div>
       </div>
     </div>
@@ -569,11 +666,11 @@
         <div class="ci-details">
           <div class="ci-row">
             <div class="ci-icon">📍</div>
-            <div><div class="ci-lbl">Adresse</div><div class="ci-val">1er étage, 236, rue Pasquier, résid. Abdelmoumen, imm.n°4, appt.n°4, Casablanca</div></div>
+            <div><div class="ci-lbl">Adresse</div><div class="ci-val">Quartier Polo, Casablanca, Maroc</div></div>
           </div>
           <div class="ci-row">
             <div class="ci-icon">📞</div>
-            <div><div class="ci-lbl">Téléphone</div><div class="ci-val">+212 522 23 78 75</div></div>
+            <div><div class="ci-lbl">Téléphone</div><div class="ci-val">+212 5XX XX XX XX</div></div>
           </div>
           <div class="ci-row">
             <div class="ci-icon">🕐</div>
